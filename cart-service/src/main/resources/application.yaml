@@ -22,7 +22,7 @@ mybatis-plus:
       id-type: auto
 logging:
   level:
-    com.hmall: debug
+    com.example: debug
   pattern:
     dateformat: HH:mm:ss:SSS
   file:
@@ -42,3 +42,6 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.example.cartservice.controller
+feign:
+  okhttp:
+    enabled: true

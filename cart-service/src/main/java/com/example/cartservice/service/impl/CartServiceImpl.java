@@ -1,30 +1,24 @@
 package com.example.cartservice.service.impl;
 
-import cn.hutool.core.collection.CollUtil;
-import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.cartservice.client.ItemClient;
+
 import com.example.cartservice.domain.dto.CartFormDTO;
-import com.example.cartservice.domain.dto.ItemDTO;
+
 import com.example.cartservice.domain.po.Cart;
 import com.example.cartservice.domain.vo.CartVO;
 import com.example.cartservice.mapper.CartMapper;
 import com.example.cartservice.service.ICartService;
+import com.example.hmapi.client.ItemClient;
+import com.example.hmapi.dto.ItemDTO;
 import com.hmall.common.exception.BadRequestException;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.common.utils.CollUtils;
 import com.hmall.common.utils.UserContext;
 import lombok.RequiredArgsConstructor;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.Collection;
 import java.util.List;
