@@ -51,6 +51,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
         // 4.校验密码
         if (!passwordEncoder.matches(password, user.getPassword())) {
+            System.out.println(password+" "+user.getPassword());
             throw new BadRequestException("用户名或密码错误");
         }
         // 5.生成TOKEN
