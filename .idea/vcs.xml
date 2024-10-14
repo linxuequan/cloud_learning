@@ -5,6 +5,8 @@
     <mapping directory="$PROJECT_DIR$/cart-service" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/hm-api" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/item-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pay-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/trade-service" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/user-service" vcs="Git" />
   </component>
 </project>
