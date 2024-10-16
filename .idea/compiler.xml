@@ -14,6 +14,7 @@
         <module name="user-service" />
         <module name="hm-service" />
         <module name="hm-api" />
+        <module name="hm-serviceGateway" />
       </profile>
     </annotationProcessing>
   </component>
@@ -23,6 +24,7 @@
       <module name="hm-api" options="-parameters" />
       <module name="hm-common" options="-parameters" />
       <module name="hm-service" options="-parameters" />
+      <module name="hm-serviceGateway" options="-parameters" />
       <module name="item-service" options="-parameters" />
       <module name="pay-service" options="-parameters" />
       <module name="trade-service" options="-parameters" />
