@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @MapperScan(("com.example.userservice.mapper"))
 @SpringBootApplication
+//@NacosService(serviceName = "your-service-name")
 public class UserServiceApplication {
 
     public static void main(String[] args) {

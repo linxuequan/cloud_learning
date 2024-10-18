@@ -6,6 +6,7 @@ E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\exception\BizIlle
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\utils\WebUtils.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\utils\Convert.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\config\MyBatisConfig.java
+E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\intercetor\UserInfoInterceptor.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\config\JsonConfig.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\exception\ForbiddenException.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\utils\CookieBuilder.java
@@ -13,6 +14,7 @@ E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\domain\PageQuery.
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\exception\UnauthorizedException.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\exception\BadRequestException.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\utils\UserContext.java
+E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\config\MvcConfig.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\domain\PageDTO.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\utils\CollUtils.java
 E:\Project_Code\hmall\hm-common\src\main\java\com\hmall\common\exception\DbException.java

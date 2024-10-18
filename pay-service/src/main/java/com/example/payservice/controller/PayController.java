@@ -1,5 +1,6 @@
 package com.example.payservice.controller;
 
+import com.example.hmapi.config.DefaultFeignConfig;
 import com.example.payservice.domain.dto.PayApplyDTO;
 import com.example.payservice.domain.dto.PayOrderFormDTO;
 import com.example.payservice.domain.vo.PayOrderVO;
@@ -12,6 +13,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +22,7 @@ import java.util.List;
 @RestController
 @RequestMapping("pay-orders")
 @RequiredArgsConstructor
+@EnableFeignClients(defaultConfiguration = DefaultFeignConfig.class)
 public class PayController {
 
     private final IPayOrderService payOrderService;

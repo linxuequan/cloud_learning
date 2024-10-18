@@ -8,21 +8,25 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cart-service" />
         <module name="pay-service" />
+        <module name="hm-gateway" />
         <module name="trade-service" />
         <module name="hm-common" />
         <module name="item-service" />
         <module name="user-service" />
         <module name="hm-service" />
         <module name="hm-api" />
-        <module name="hm-serviceGateway" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hm-serviceGateway" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cart-service" options="-parameters" />
       <module name="hm-api" options="-parameters" />
       <module name="hm-common" options="-parameters" />
+      <module name="hm-gateway" options="-parameters" />
       <module name="hm-service" options="-parameters" />
       <module name="hm-serviceGateway" options="-parameters" />
       <module name="item-service" options="-parameters" />

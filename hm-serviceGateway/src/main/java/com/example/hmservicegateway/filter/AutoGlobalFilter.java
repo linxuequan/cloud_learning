@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
+import springfox.documentation.service.Server;
 
 import java.util.List;
 
@@ -43,7 +44,9 @@ public class AutoGlobalFilter implements GlobalFilter, Ordered {
             return response.setComplete();
         }
         System.out.println(userId);
-        return chain.filter(exchange);
+        String userInfo = userId.toString();
+        ServerWebExchange ex = exchange.mutate().request(builder -> builder.header("user-Info",userInfo)).build();
+        return chain.filter(ex);
     }
 
     private boolean isExclude(String path) {
