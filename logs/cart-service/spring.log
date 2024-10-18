@@ -1384,3 +1384,808 @@ Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected,
 19:19:42:361 DEBUG 20936 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.delete           : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
 19:19:42:361 DEBUG 20936 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.delete           : ==> Parameters: 1(Long), 1713453(Long)
 19:19:42:362 DEBUG 20936 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.delete           : <==    Updates: 1
+20:10:08:059  WARN 20936 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+20:10:08:059  WARN 20936 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+20:10:08:059  WARN 20936 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+20:10:08:059  WARN 20936 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+20:10:08:073  INFO 20936 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+20:10:08:076  INFO 20936 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+20:10:08:403  INFO 20936 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+20:10:08:403  INFO 20936 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@16bb11a5[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+20:10:08:403  INFO 20936 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1729242053374_192.168.139.1_61407
+20:10:08:404  INFO 20936 --- [nacos-grpc-client-executor-2330] c.a.n.c.remote.client.grpc.GrpcClient    : [1729242053374_192.168.139.1_61407]Ignore complete event,isRunning:false,isAbandon=false
+20:10:08:405  INFO 20936 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@15595018[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 2331]
+20:10:08:407  INFO 20936 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+20:10:08:410  INFO 20936 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+20:10:13:056  INFO 25624 --- [main] c.e.cartservice.CartServiceApplication   : The following 1 profile is active: "local"
+20:10:13:520  INFO 25624 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a313276a-7cc8-3b30-bff7-03aed5fe2f6f
+20:10:13:734  INFO 25624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+20:10:13:739  INFO 25624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+20:10:13:739  INFO 25624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+20:10:13:809  INFO 25624 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+20:10:13:810  INFO 25624 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 743 ms
+20:10:13:908  INFO 25624 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+20:10:14:529  INFO 25624 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+20:10:14:725  INFO 25624 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 5778f6ea-0850-4248-a253-38aab5f0d8fb
+20:10:14:725  INFO 25624 --- [main] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] RpcClient init label, labels = {module=naming, source=sdk}
+20:10:14:726  INFO 25624 --- [main] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+20:10:14:726  INFO 25624 --- [main] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+20:10:14:726  INFO 25624 --- [main] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+20:10:14:727  INFO 25624 --- [main] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] Try to connect to server on start up, server: {serverIp = '192.168.139.130', server main port = 8848}
+20:10:14:845  INFO 25624 --- [main] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] Success to connect to server [192.168.139.130:8848] on start up, connectionId = 1729253414753_192.168.139.1_57154
+20:10:14:845  INFO 25624 --- [main] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+20:10:14:845  INFO 25624 --- [main] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$483/0x000002a5114d6350
+20:10:14:845  INFO 25624 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] Notify connected event to listeners.
+20:10:14:870  INFO 25624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+20:10:14:875  INFO 25624 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.60.70:8082 register finished
+20:10:14:957  INFO 25624 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+20:10:14:958  INFO 25624 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+20:10:14:972  INFO 25624 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+20:10:15:032  INFO 25624 --- [main] c.e.cartservice.CartServiceApplication   : Started CartServiceApplication in 3.362 seconds (JVM running for 3.695)
+20:10:15:035  INFO 25624 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+20:10:15:035  INFO 25624 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+20:10:15:035  INFO 25624 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+20:10:15:411  INFO 25624 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] Receive server push request, request = NotifySubscriberRequest, requestId = 98
+20:10:15:412  INFO 25624 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [5778f6ea-0850-4248-a253-38aab5f0d8fb] Ack server push request, request = NotifySubscriberRequest, requestId = 98
+20:10:54:705  WARN 25624 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+20:10:54:705  WARN 25624 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+20:10:54:706  WARN 25624 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+20:10:54:706  WARN 25624 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+20:10:54:723  INFO 25624 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+20:10:54:726  INFO 25624 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+20:10:55:054  INFO 25624 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+20:10:55:054  INFO 25624 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@1e9f541b[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+20:10:55:055  INFO 25624 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1729253414753_192.168.139.1_57154
+20:10:55:056  INFO 25624 --- [nacos-grpc-client-executor-16] c.a.n.c.remote.client.grpc.GrpcClient    : [1729253414753_192.168.139.1_57154]Ignore complete event,isRunning:false,isAbandon=false
+20:10:55:056  INFO 25624 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@e723ad4[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 17]
+20:10:57:516  INFO 22052 --- [main] c.e.cartservice.CartServiceApplication   : The following 1 profile is active: "local"
+20:10:57:955  INFO 22052 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a313276a-7cc8-3b30-bff7-03aed5fe2f6f
+20:10:58:161  INFO 22052 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+20:10:58:167  INFO 22052 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+20:10:58:167  INFO 22052 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+20:10:58:237  INFO 22052 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+20:10:58:237  INFO 22052 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 712 ms
+20:10:58:333  INFO 22052 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+20:10:58:919  INFO 22052 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+20:10:59:113  INFO 22052 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of dd95737c-90b6-4215-a15a-e8df400f7de3
+20:10:59:113  INFO 22052 --- [main] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] RpcClient init label, labels = {module=naming, source=sdk}
+20:10:59:114  INFO 22052 --- [main] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+20:10:59:115  INFO 22052 --- [main] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+20:10:59:115  INFO 22052 --- [main] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+20:10:59:115  INFO 22052 --- [main] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Try to connect to server on start up, server: {serverIp = '192.168.139.130', server main port = 8848}
+20:10:59:241  INFO 22052 --- [main] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Success to connect to server [192.168.139.130:8848] on start up, connectionId = 1729253459141_192.168.139.1_57199
+20:10:59:241  INFO 22052 --- [main] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+20:10:59:241  INFO 22052 --- [main] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$483/0x00000221ee4ce9a8
+20:10:59:241  INFO 22052 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Notify connected event to listeners.
+20:10:59:264  INFO 22052 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+20:10:59:268  INFO 22052 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.60.70:8082 register finished
+20:10:59:348  INFO 22052 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+20:10:59:350  INFO 22052 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+20:10:59:363  INFO 22052 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+20:10:59:413  INFO 22052 --- [main] c.e.cartservice.CartServiceApplication   : Started CartServiceApplication in 3.229 seconds (JVM running for 3.559)
+20:10:59:416  INFO 22052 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+20:10:59:417  INFO 22052 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+20:10:59:417  INFO 22052 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+20:10:59:830  INFO 22052 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Receive server push request, request = NotifySubscriberRequest, requestId = 103
+20:10:59:831  INFO 22052 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Ack server push request, request = NotifySubscriberRequest, requestId = 103
+20:13:03:203  INFO 22052 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:13:03:204  INFO 22052 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+20:13:03:205  INFO 22052 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+20:13:03:266  INFO 22052 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+20:13:03:394  INFO 22052 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+20:13:03:399 DEBUG 22052 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:03:415 DEBUG 22052 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:03:432 DEBUG 22052 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:03:462 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:03:462 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:03:462 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:03:551 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (89ms)
+20:13:03:552 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:03:552 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:03:552 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:03 GMT
+20:13:03:552 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:03:552 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:03:552 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:03:552 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:03:552 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:13:04:083  INFO 22052 --- [nacos-grpc-client-executor-35] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Receive server push request, request = NotifySubscriberRequest, requestId = 104
+20:13:04:084  INFO 22052 --- [nacos-grpc-client-executor-35] com.alibaba.nacos.common.remote.client   : [dd95737c-90b6-4215-a15a-e8df400f7de3] Ack server push request, request = NotifySubscriberRequest, requestId = 104
+20:13:05:447 DEBUG 22052 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:05:447 DEBUG 22052 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:05:449 DEBUG 22052 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:05:449 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:05:449 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:05:449 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:05:457 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (7ms)
+20:13:05:457 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:05:457 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:05:457 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:05 GMT
+20:13:05:457 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:05:457 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:05:457 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:05:457 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:05:457 DEBUG 22052 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:13:08:911 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:13:08:911 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long), 3072507(Long)
+20:13:08:912 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:13:08:913 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:13:08:914 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long)
+20:13:08:914 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:13:08:916 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.insert           : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+20:13:08:917 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.insert           : ==> Parameters: 1(Long), 3072507(Long), 飞利浦 65POD901C/T3 65英寸 OLED曲面 三边流光溢彩金属超薄机身4K超高清智能液晶电视机（PHILIPS）(String), {"版本": "65英寸"}(String), 368800(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/5966/19/11913/209097/5bd13c30Ea76804a8/6faec86cea020dd0.jpg!q70.jpg.webp(String)
+20:13:08:918 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.insert           : <==    Updates: 1
+20:13:08:984 DEBUG 22052 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:08:984 DEBUG 22052 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:08:986 DEBUG 22052 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectList       : <==      Total: 2
+20:13:08:987 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163&ids=3072507 HTTP/1.1
+20:13:08:987 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:08:987 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:08:992 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (4ms)
+20:13:08:992 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:08:992 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:08:992 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:08 GMT
+20:13:08:992 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:08:992 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:08:992 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:08:993 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"3072507","name":"飞利浦 65POD901C/T3 65英寸 OLED曲面 三边流光溢彩金属超薄机身4K超高清智能液晶电视机（PHILIPS）","price":368800,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/5966/19/11913/209097/5bd13c30Ea76804a8/6faec86cea020dd0.jpg!q70.jpg.webp","category":"曲面电视","brand":"飞利浦","spec":"{\"版本\": \"65英寸\"}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:08:993 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (816-byte body)
+20:13:12:623 DEBUG 22052 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.delete           : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+20:13:12:624 DEBUG 22052 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.delete           : ==> Parameters: 1(Long), 3072507(Long)
+20:13:12:626 DEBUG 22052 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.delete           : <==    Updates: 1
+20:13:14:709 DEBUG 22052 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:14:710 DEBUG 22052 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:14:711 DEBUG 22052 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:14:712 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:14:712 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:14:712 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:14:716 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (4ms)
+20:13:14:716 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:14:716 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:14:716 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:14 GMT
+20:13:14:716 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:14:716 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:14:716 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:14:716 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:14:716 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:13:31:010 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:31:010 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:31:011 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:31:012 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:31:012 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:31:012 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:31:018 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (5ms)
+20:13:31:018 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:31:018 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:31:018 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:31 GMT
+20:13:31:018 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:31:018 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:31:018 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:31:018 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:31:018 DEBUG 22052 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:13:31:603 DEBUG 22052 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:31:603 DEBUG 22052 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:31:605 DEBUG 22052 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:31:605 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:31:605 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:31:605 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:31:615 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (9ms)
+20:13:31:615 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:31:615 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:31:615 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:31 GMT
+20:13:31:615 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:31:615 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:31:615 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:31:615 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:31:615 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:13:35:545 DEBUG 22052 --- [http-nio-8082-exec-9] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:35:546 DEBUG 22052 --- [http-nio-8082-exec-9] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:35:548 DEBUG 22052 --- [http-nio-8082-exec-9] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:35:548 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:35:548 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:35:548 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:35:552 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (3ms)
+20:13:35:552 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:35:552 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:35:552 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:35 GMT
+20:13:35:552 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:35:552 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:35:552 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:35:553 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:35:553 DEBUG 22052 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:13:39:932 DEBUG 22052 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:13:39:933 DEBUG 22052 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long), 2030774(Long)
+20:13:39:934 DEBUG 22052 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:13:39:935 DEBUG 22052 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:13:39:935 DEBUG 22052 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long)
+20:13:39:936 DEBUG 22052 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:13:39:936 DEBUG 22052 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.insert           : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+20:13:39:936 DEBUG 22052 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.insert           : ==> Parameters: 1(Long), 2030774(Long), 外交官（Diplomat）磨砂箱子拉杆箱行李箱男女旅行箱密码箱万向轮箱包TC-15174TT 28英寸 黑色(String), {"颜色": "黑色", "尺寸": "28英寸"}(String), 58800(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t22870/321/1238637240/149996/1aa457fe/5b594396Nfb108e31.jpg!q70.jpg.webp(String)
+20:13:39:938 DEBUG 22052 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.insert           : <==    Updates: 1
+20:13:40:010 DEBUG 22052 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:40:010 DEBUG 22052 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:40:011 DEBUG 22052 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : <==      Total: 2
+20:13:40:012 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163&ids=2030774 HTTP/1.1
+20:13:40:013 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:40:013 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:40:019 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (6ms)
+20:13:40:019 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:40:019 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:40:019 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:40 GMT
+20:13:40:019 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:40:019 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:40:019 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:40:020 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"2030774","name":"外交官（Diplomat）磨砂箱子拉杆箱行李箱男女旅行箱密码箱万向轮箱包TC-15174TT 28英寸 黑色","price":58800,"stock":9998,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22870/321/1238637240/149996/1aa457fe/5b594396Nfb108e31.jpg!q70.jpg.webp","category":"拉杆箱","brand":"Diplomat","spec":"{\"颜色\": \"黑色\", \"尺寸\": \"28英寸\"}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:40:020 DEBUG 22052 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (825-byte body)
+20:13:43:638 DEBUG 22052 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.delete           : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+20:13:43:638 DEBUG 22052 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.delete           : ==> Parameters: 1(Long), 2030774(Long)
+20:13:43:640 DEBUG 22052 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.delete           : <==    Updates: 1
+20:13:45:546 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:45:546 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:45:549 DEBUG 22052 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:45:550 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:45:551 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:45:551 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:45:556 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (4ms)
+20:13:45:556 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:45:556 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:45:556 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:45 GMT
+20:13:45:556 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:45:556 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:45:556 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:45:556 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:45:556 DEBUG 22052 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:13:52:227 DEBUG 22052 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:52:227 DEBUG 22052 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:52:229 DEBUG 22052 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:52:230 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:52:230 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:52:230 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:52:234 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (4ms)
+20:13:52:234 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:52:234 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:52:234 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:52 GMT
+20:13:52:234 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:52:234 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:52:234 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:52:234 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:52:234 DEBUG 22052 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:13:52:897 DEBUG 22052 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:52:898 DEBUG 22052 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:52:899 DEBUG 22052 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:52:899 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:52:899 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:52:899 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:52:904 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (4ms)
+20:13:52:904 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:52:904 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:52:904 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:52 GMT
+20:13:52:904 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:52:904 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:52:904 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:52:904 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:52:904 DEBUG 22052 --- [http-nio-8082-exec-4] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:13:56:847 DEBUG 22052 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:13:56:848 DEBUG 22052 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:13:56:850 DEBUG 22052 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:13:56:851 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:13:56:851 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:13:56:851 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:13:56:858 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (6ms)
+20:13:56:858 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:13:56:858 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:13:56:858 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:13:56 GMT
+20:13:56:858 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:13:56:858 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:13:56:858 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:13:56:858 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:13:56:858 DEBUG 22052 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:14:00:981 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:14:00:981 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long), 2030774(Long)
+20:14:00:982 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:14:00:983 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:14:00:983 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long)
+20:14:00:984 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:14:00:984 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.insert           : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+20:14:00:984 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.insert           : ==> Parameters: 1(Long), 2030774(Long), 外交官（Diplomat）磨砂箱子拉杆箱行李箱男女旅行箱密码箱万向轮箱包TC-15174TT 28英寸 黑色(String), {"颜色": "黑色", "尺寸": "28英寸"}(String), 58800(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t22870/321/1238637240/149996/1aa457fe/5b594396Nfb108e31.jpg!q70.jpg.webp(String)
+20:14:00:987 DEBUG 22052 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.insert           : <==    Updates: 1
+20:14:01:080 DEBUG 22052 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:14:01:081 DEBUG 22052 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:14:01:083 DEBUG 22052 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectList       : <==      Total: 2
+20:14:01:086 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163&ids=2030774 HTTP/1.1
+20:14:01:086 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:14:01:086 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:14:01:091 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (5ms)
+20:14:01:091 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:14:01:091 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:14:01:091 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:14:01 GMT
+20:14:01:091 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:14:01:091 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:14:01:091 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:14:01:091 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"2030774","name":"外交官（Diplomat）磨砂箱子拉杆箱行李箱男女旅行箱密码箱万向轮箱包TC-15174TT 28英寸 黑色","price":58800,"stock":9997,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22870/321/1238637240/149996/1aa457fe/5b594396Nfb108e31.jpg!q70.jpg.webp","category":"拉杆箱","brand":"Diplomat","spec":"{\"颜色\": \"黑色\", \"尺寸\": \"28英寸\"}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:14:01:092 DEBUG 22052 --- [http-nio-8082-exec-8] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (825-byte body)
+20:14:03:830 DEBUG 22052 --- [http-nio-8082-exec-9] c.e.c.mapper.CartMapper.delete           : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+20:14:03:830 DEBUG 22052 --- [http-nio-8082-exec-9] c.e.c.mapper.CartMapper.delete           : ==> Parameters: 1(Long), 2030774(Long)
+20:14:03:831 DEBUG 22052 --- [http-nio-8082-exec-9] c.e.c.mapper.CartMapper.delete           : <==    Updates: 1
+20:27:01:569  INFO 22052 --- [nacos-grpc-client-executor-212] com.alibaba.nacos.common.remote.client   : [360e30e0-fb6d-48e2-9912-3cf68c9ee2c9_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 105
+20:27:01:569  INFO 22052 --- [nacos-grpc-client-executor-212] com.alibaba.nacos.common.remote.client   : [360e30e0-fb6d-48e2-9912-3cf68c9ee2c9_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 105
+20:27:01:706  WARN 22052 --- [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[cart-service] & group[DEFAULT_GROUP]
+20:27:01:780  WARN 22052 --- [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[cart-service-local.yaml] & group[DEFAULT_GROUP]
+20:27:01:780  INFO 22052 --- [nacos.client.cachedata.internal.notifier] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-cart-service-local.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cart-service.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cart-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-swagger.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-log.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-jdbc.yaml,DEFAULT_GROUP'}]
+20:27:01:784  INFO 22052 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : The following 1 profile is active: "local"
+20:27:01:788  INFO 22052 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : Started application in 0.206 seconds (JVM running for 965.925)
+20:27:01:824  INFO 22052 --- [nacos.client.cachedata.internal.notifier] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [hm.cart.maxAmount]
+20:27:07:948  WARN 22052 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+20:27:07:948  WARN 22052 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+20:27:07:949  WARN 22052 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+20:27:07:949  WARN 22052 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+20:27:07:966  INFO 22052 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+20:27:07:968  INFO 22052 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+20:27:08:273  INFO 22052 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+20:27:08:273  INFO 22052 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@d178b33[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+20:27:08:273  INFO 22052 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1729253459141_192.168.139.1_57199
+20:27:08:274  INFO 22052 --- [nacos-grpc-client-executor-214] c.a.n.c.remote.client.grpc.GrpcClient    : [1729253459141_192.168.139.1_57199]Ignore complete event,isRunning:false,isAbandon=false
+20:27:08:275  INFO 22052 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@2d62f3d5[Running, pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 215]
+20:27:08:277  INFO 22052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+20:27:08:282  INFO 22052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+20:27:11:804  INFO 25908 --- [main] c.e.cartservice.CartServiceApplication   : The following 1 profile is active: "local"
+20:27:12:303  INFO 25908 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=20b596d0-ed15-37d0-a5ef-6009207b8bbe
+20:27:12:572  INFO 25908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+20:27:12:581  INFO 25908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+20:27:12:581  INFO 25908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+20:27:12:667  INFO 25908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+20:27:12:667  INFO 25908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 851 ms
+20:27:12:784  INFO 25908 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+20:27:13:421  INFO 25908 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+20:27:13:606  INFO 25908 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 4ac29876-2eef-4327-a256-9e6d5446d74b
+20:27:13:606  INFO 25908 --- [main] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] RpcClient init label, labels = {module=naming, source=sdk}
+20:27:13:607  INFO 25908 --- [main] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+20:27:13:607  INFO 25908 --- [main] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+20:27:13:607  INFO 25908 --- [main] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+20:27:13:607  INFO 25908 --- [main] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Try to connect to server on start up, server: {serverIp = '192.168.139.130', server main port = 8848}
+20:27:13:720  INFO 25908 --- [main] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Success to connect to server [192.168.139.130:8848] on start up, connectionId = 1729254433634_192.168.139.1_57968
+20:27:13:720  INFO 25908 --- [main] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+20:27:13:720  INFO 25908 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Notify connected event to listeners.
+20:27:13:720  INFO 25908 --- [main] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$483/0x000001bef64c9450
+20:27:13:759  INFO 25908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+20:27:13:768  INFO 25908 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.60.70:8082 register finished
+20:27:13:857  INFO 25908 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+20:27:13:859  INFO 25908 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+20:27:13:874  INFO 25908 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+20:27:13:935  INFO 25908 --- [main] c.e.cartservice.CartServiceApplication   : Started CartServiceApplication in 3.544 seconds (JVM running for 3.898)
+20:27:13:939  INFO 25908 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+20:27:13:939  INFO 25908 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+20:27:13:941  INFO 25908 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+20:27:14:295  INFO 25908 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Receive server push request, request = NotifySubscriberRequest, requestId = 110
+20:27:14:297  INFO 25908 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Ack server push request, request = NotifySubscriberRequest, requestId = 110
+20:27:24:651  INFO 25908 --- [http-nio-8082-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:27:24:651  INFO 25908 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+20:27:24:652  INFO 25908 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+20:27:24:718  INFO 25908 --- [http-nio-8082-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+20:27:24:854  INFO 25908 --- [http-nio-8082-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+20:27:24:859 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:27:24:877 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:27:24:894 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:27:24:922 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:27:24:923 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:27:24:923 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:27:25:012 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (88ms)
+20:27:25:012 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:27:25:012 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:27:25:012 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:27:25 GMT
+20:27:25:012 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:27:25:012 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:27:25:012 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:27:25:013 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:27:25:013 DEBUG 25908 --- [http-nio-8082-exec-6] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:27:25:551  INFO 25908 --- [nacos-grpc-client-executor-10] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Receive server push request, request = NotifySubscriberRequest, requestId = 111
+20:27:25:551  INFO 25908 --- [nacos-grpc-client-executor-10] com.alibaba.nacos.common.remote.client   : [4ac29876-2eef-4327-a256-9e6d5446d74b] Ack server push request, request = NotifySubscriberRequest, requestId = 111
+20:27:27:685 DEBUG 25908 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:27:27:685 DEBUG 25908 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:27:27:686 DEBUG 25908 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:27:27:687 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:27:27:687 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:27:27:687 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:27:27:696 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (8ms)
+20:27:27:696 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:27:27:696 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:27:27:696 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:27:27 GMT
+20:27:27:696 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:27:27:696 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:27:27:696 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:27:27:696 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:27:27:696 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:27:32:279 DEBUG 25908 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:27:32:279 DEBUG 25908 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long), 1713453(Long)
+20:27:32:280 DEBUG 25908 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:27:32:281 DEBUG 25908 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:27:32:282 DEBUG 25908 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long)
+20:27:32:282 DEBUG 25908 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:27:32:284 DEBUG 25908 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.insert           : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+20:27:32:284 DEBUG 25908 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.insert           : ==> Parameters: 1(Long), 1713453(Long), 小鹿叮叮 超薄 成长裤 婴儿拉拉裤 男女学步通用尿不湿 大号L码84片【9-14kg】(String), {}(String), 12800(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t22591/39/1930198982/188975/7385556d/5b6d33bdNa455e2b0.jpg!q70.jpg.webp(String)
+20:27:32:286 DEBUG 25908 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.insert           : <==    Updates: 1
+20:27:32:355 DEBUG 25908 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:27:32:355 DEBUG 25908 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:27:32:357 DEBUG 25908 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.selectList       : <==      Total: 2
+20:27:32:358 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163&ids=1713453 HTTP/1.1
+20:27:32:358 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:27:32:358 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:27:32:364 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (5ms)
+20:27:32:364 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:27:32:364 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:27:32:364 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:27:32 GMT
+20:27:32:364 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:27:32:364 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:27:32:364 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:27:32:364 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"1713453","name":"小鹿叮叮 超薄 成长裤 婴儿拉拉裤 男女学步通用尿不湿 大号L码84片【9-14kg】","price":12800,"stock":9998,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22591/39/1930198982/188975/7385556d/5b6d33bdNa455e2b0.jpg!q70.jpg.webp","category":"拉拉裤","brand":"小鹿叮叮","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:27:32:364 DEBUG 25908 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (763-byte body)
+20:27:36:315 DEBUG 25908 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.delete           : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+20:27:36:316 DEBUG 25908 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.delete           : ==> Parameters: 1(Long), 1713453(Long)
+20:27:36:328 DEBUG 25908 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.delete           : <==    Updates: 1
+20:27:38:929 DEBUG 25908 --- [http-nio-8082-exec-9] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:27:38:930 DEBUG 25908 --- [http-nio-8082-exec-9] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:27:38:932 DEBUG 25908 --- [http-nio-8082-exec-9] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:27:38:933 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:27:38:933 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:27:38:933 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:27:38:939 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (5ms)
+20:27:38:939 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:27:38:939 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:27:38:939 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:27:38 GMT
+20:27:38:939 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:27:38:939 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:27:38:939 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:27:38:939 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:27:38:939 DEBUG 25908 --- [http-nio-8082-exec-9] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:27:40:901 DEBUG 25908 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:27:40:901 DEBUG 25908 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:27:40:903 DEBUG 25908 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:27:40:904 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163 HTTP/1.1
+20:27:40:904 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:27:40:904 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:27:40:910 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (6ms)
+20:27:40:910 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:27:40:910 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:27:40:911 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:27:40 GMT
+20:27:40:911 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:27:40:911 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:27:40:911 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:27:40:911 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:27:40:911 DEBUG 25908 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (371-byte body)
+20:27:44:029 DEBUG 25908 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:27:44:029 DEBUG 25908 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long), 1533902(Long)
+20:27:44:030 DEBUG 25908 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:27:44:031 DEBUG 25908 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:27:44:032 DEBUG 25908 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long)
+20:27:44:033 DEBUG 25908 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:27:44:034 DEBUG 25908 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.insert           : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+20:27:44:034 DEBUG 25908 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.insert           : ==> Parameters: 1(Long), 1533902(Long), 新西兰进口牛奶 纽仕兰 3.5g蛋白质全脂牛奶 250ml*24整箱装纯牛奶(String), {}(String), 9700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t3526/295/888755633/189982/16ea21b4/5816dce5N70820f42.jpg!q70.jpg.webp(String)
+20:27:44:036 DEBUG 25908 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.insert           : <==    Updates: 1
+20:27:44:111 DEBUG 25908 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:27:44:111 DEBUG 25908 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:27:44:112 DEBUG 25908 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectList       : <==      Total: 2
+20:27:44:113 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163&ids=1533902 HTTP/1.1
+20:27:44:113 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:27:44:113 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:27:44:118 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (5ms)
+20:27:44:118 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:27:44:118 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:27:44:118 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:27:43 GMT
+20:27:44:118 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:27:44:118 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:27:44:118 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:27:44:119 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"1533902","name":"新西兰进口牛奶 纽仕兰 3.5g蛋白质全脂牛奶 250ml*24整箱装纯牛奶","price":9700,"stock":9997,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3526/295/888755633/189982/16ea21b4/5816dce5N70820f42.jpg!q70.jpg.webp","category":"牛奶","brand":"纽仕兰","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:27:44:119 DEBUG 25908 --- [http-nio-8082-exec-5] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (738-byte body)
+20:27:45:522 DEBUG 25908 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:27:45:523 DEBUG 25908 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:27:45:524 DEBUG 25908 --- [http-nio-8082-exec-10] c.e.c.mapper.CartMapper.selectList       : <==      Total: 2
+20:27:45:525 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163&ids=1533902 HTTP/1.1
+20:27:45:525 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:27:45:525 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:27:45:533 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (6ms)
+20:27:45:533 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:27:45:533 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:27:45:533 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:27:45 GMT
+20:27:45:533 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:27:45:533 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:27:45:533 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:27:45:533 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"1533902","name":"新西兰进口牛奶 纽仕兰 3.5g蛋白质全脂牛奶 250ml*24整箱装纯牛奶","price":9700,"stock":9997,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3526/295/888755633/189982/16ea21b4/5816dce5N70820f42.jpg!q70.jpg.webp","category":"牛奶","brand":"纽仕兰","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:27:45:533 DEBUG 25908 --- [http-nio-8082-exec-10] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (738-byte body)
+20:27:49:151 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:27:49:151 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long), 2030774(Long)
+20:27:49:152 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:27:49:153 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:27:49:154 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 1(Long)
+20:27:49:159 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:27:49:161 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.insert           : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+20:27:49:161 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.insert           : ==> Parameters: 1(Long), 2030774(Long), 外交官（Diplomat）磨砂箱子拉杆箱行李箱男女旅行箱密码箱万向轮箱包TC-15174TT 28英寸 黑色(String), {"颜色": "黑色", "尺寸": "28英寸"}(String), 58800(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t22870/321/1238637240/149996/1aa457fe/5b594396Nfb108e31.jpg!q70.jpg.webp(String)
+20:27:49:168 DEBUG 25908 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.insert           : <==    Updates: 1
+20:27:49:242 DEBUG 25908 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:27:49:243 DEBUG 25908 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 1(Long)
+20:27:49:245 DEBUG 25908 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : <==      Total: 3
+20:27:49:245 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100000006163&ids=2030774&ids=1533902 HTTP/1.1
+20:27:49:245 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 1
+20:27:49:245 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:27:49:250 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (4ms)
+20:27:49:250 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:27:49:250 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:27:49:250 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:27:49 GMT
+20:27:49:250 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:27:49:250 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:27:49:250 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:27:49:250 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"1533902","name":"新西兰进口牛奶 纽仕兰 3.5g蛋白质全脂牛奶 250ml*24整箱装纯牛奶","price":9700,"stock":9997,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3526/295/888755633/189982/16ea21b4/5816dce5N70820f42.jpg!q70.jpg.webp","category":"牛奶","brand":"纽仕兰","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"2030774","name":"外交官（Diplomat）磨砂箱子拉杆箱行李箱男女旅行箱密码箱万向轮箱包TC-15174TT 28英寸 黑色","price":58800,"stock":9996,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22870/321/1238637240/149996/1aa457fe/5b594396Nfb108e31.jpg!q70.jpg.webp","category":"拉杆箱","brand":"Diplomat","spec":"{\"颜色\": \"黑色\", \"尺寸\": \"28英寸\"}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"100000006163","name":"巴布豆(BOBDOG)柔薄悦动婴儿拉拉裤XXL码80片(15kg以上)","price":67100,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t23998/350/2363990466/222391/a6e9581d/5b7cba5bN0c18fb4f.jpg!q70.jpg.webp","category":"拉拉裤","brand":"巴布豆","spec":"{}","sold":11,"commentCount":33343434,"isAD":false,"status":2}]
+20:27:49:250 DEBUG 25908 --- [http-nio-8082-exec-1] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (1192-byte body)
+20:28:37:587  WARN 25908 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+20:28:37:587  WARN 25908 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+20:28:37:587  WARN 25908 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+20:28:37:587  WARN 25908 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+20:28:37:607  INFO 25908 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+20:28:37:609  INFO 25908 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+20:28:37:914  INFO 25908 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+20:28:37:914  INFO 25908 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@37a55bc3[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+20:28:37:914  INFO 25908 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1729254433634_192.168.139.1_57968
+20:28:37:916  INFO 25908 --- [nacos-grpc-client-executor-29] c.a.n.c.remote.client.grpc.GrpcClient    : [1729254433634_192.168.139.1_57968]Ignore complete event,isRunning:false,isAbandon=false
+20:28:37:917  INFO 25908 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@56d815c0[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 30]
+20:28:37:919  INFO 25908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+20:28:37:924  INFO 25908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+20:28:42:199  INFO 24820 --- [main] c.e.cartservice.CartServiceApplication   : The following 1 profile is active: "local"
+20:28:42:654  INFO 24820 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=20b596d0-ed15-37d0-a5ef-6009207b8bbe
+20:28:42:862  INFO 24820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+20:28:42:867  INFO 24820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+20:28:42:868  INFO 24820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+20:28:42:936  INFO 24820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+20:28:42:936  INFO 24820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 728 ms
+20:28:43:030  INFO 24820 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+20:28:43:746  INFO 24820 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+20:28:43:943  INFO 24820 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc
+20:28:43:943  INFO 24820 --- [main] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] RpcClient init label, labels = {module=naming, source=sdk}
+20:28:43:944  INFO 24820 --- [main] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+20:28:43:944  INFO 24820 --- [main] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+20:28:43:945  INFO 24820 --- [main] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+20:28:43:945  INFO 24820 --- [main] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Try to connect to server on start up, server: {serverIp = '192.168.139.130', server main port = 8848}
+20:28:44:061  INFO 24820 --- [main] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Success to connect to server [192.168.139.130:8848] on start up, connectionId = 1729254523973_192.168.139.1_58104
+20:28:44:061  INFO 24820 --- [main] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+20:28:44:061  INFO 24820 --- [main] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$483/0x00000185c94f69a8
+20:28:44:061  INFO 24820 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Notify connected event to listeners.
+20:28:44:086  INFO 24820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+20:28:44:091  INFO 24820 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.60.70:8082 register finished
+20:28:44:173  INFO 24820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+20:28:44:174  INFO 24820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+20:28:44:188  INFO 24820 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+20:28:44:252  INFO 24820 --- [main] c.e.cartservice.CartServiceApplication   : Started CartServiceApplication in 3.405 seconds (JVM running for 3.741)
+20:28:44:255  INFO 24820 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+20:28:44:255  INFO 24820 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+20:28:44:255  INFO 24820 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+20:28:44:614  INFO 24820 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Receive server push request, request = NotifySubscriberRequest, requestId = 116
+20:28:44:615  INFO 24820 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Ack server push request, request = NotifySubscriberRequest, requestId = 116
+20:28:54:266  INFO 24820 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:28:54:266  INFO 24820 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+20:28:54:267  INFO 24820 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+20:28:54:338  INFO 24820 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+20:28:54:478  INFO 24820 --- [http-nio-8082-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+20:28:54:484 DEBUG 24820 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:28:54:504 DEBUG 24820 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 2(Long)
+20:28:54:520 DEBUG 24820 --- [http-nio-8082-exec-1] c.e.c.mapper.CartMapper.selectList       : <==      Total: 0
+20:28:58:555 DEBUG 24820 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:28:58:555 DEBUG 24820 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 2(Long), 1533902(Long)
+20:28:58:556 DEBUG 24820 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:28:58:557 DEBUG 24820 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:28:58:558 DEBUG 24820 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 2(Long)
+20:28:58:558 DEBUG 24820 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:28:58:579 DEBUG 24820 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.insert           : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+20:28:58:580 DEBUG 24820 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.insert           : ==> Parameters: 2(Long), 1533902(Long), 新西兰进口牛奶 纽仕兰 3.5g蛋白质全脂牛奶 250ml*24整箱装纯牛奶(String), {}(String), 9700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t3526/295/888755633/189982/16ea21b4/5816dce5N70820f42.jpg!q70.jpg.webp(String)
+20:28:58:582 DEBUG 24820 --- [http-nio-8082-exec-4] c.e.c.mapper.CartMapper.insert           : <==    Updates: 1
+20:28:58:652 DEBUG 24820 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:28:58:652 DEBUG 24820 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 2(Long)
+20:28:58:655 DEBUG 24820 --- [http-nio-8082-exec-3] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:28:58:659 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=1533902 HTTP/1.1
+20:28:58:659 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 2
+20:28:58:659 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:28:58:751 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (91ms)
+20:28:58:751 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:28:58:751 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:28:58:751 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:28:58 GMT
+20:28:58:751 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:28:58:751 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:28:58:751 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:28:58:752 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"1533902","name":"新西兰进口牛奶 纽仕兰 3.5g蛋白质全脂牛奶 250ml*24整箱装纯牛奶","price":9700,"stock":9997,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3526/295/888755633/189982/16ea21b4/5816dce5N70820f42.jpg!q70.jpg.webp","category":"牛奶","brand":"纽仕兰","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+20:28:58:752 DEBUG 24820 --- [http-nio-8082-exec-3] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (368-byte body)
+20:28:59:306  INFO 24820 --- [nacos-grpc-client-executor-11] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Receive server push request, request = NotifySubscriberRequest, requestId = 117
+20:28:59:307  INFO 24820 --- [nacos-grpc-client-executor-11] com.alibaba.nacos.common.remote.client   : [78b1a3a6-8dba-4a4d-a791-cfa28b02a3cc] Ack server push request, request = NotifySubscriberRequest, requestId = 117
+20:29:03:948 DEBUG 24820 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:29:03:949 DEBUG 24820 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 2(Long)
+20:29:03:950 DEBUG 24820 --- [http-nio-8082-exec-2] c.e.c.mapper.CartMapper.selectList       : <==      Total: 1
+20:29:03:950 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=1533902 HTTP/1.1
+20:29:03:950 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 2
+20:29:03:950 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:29:03:958 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (7ms)
+20:29:03:958 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:29:03:958 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:29:03:958 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:29:03 GMT
+20:29:03:958 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:29:03:959 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:29:03:959 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:29:03:959 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"1533902","name":"新西兰进口牛奶 纽仕兰 3.5g蛋白质全脂牛奶 250ml*24整箱装纯牛奶","price":9700,"stock":9997,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3526/295/888755633/189982/16ea21b4/5816dce5N70820f42.jpg!q70.jpg.webp","category":"牛奶","brand":"纽仕兰","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+20:29:03:959 DEBUG 24820 --- [http-nio-8082-exec-2] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (368-byte body)
+20:29:08:041 DEBUG 24820 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:29:08:041 DEBUG 24820 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 2(Long), 40305713537(Long)
+20:29:08:042 DEBUG 24820 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:29:08:043 DEBUG 24820 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:29:08:043 DEBUG 24820 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 2(Long)
+20:29:08:043 DEBUG 24820 --- [http-nio-8082-exec-5] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:29:08:047 ERROR 24820 --- [http-nio-8082-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.hmall.common.exception.BizIllegalException: 用户购物车课程不能超过10] with root cause
+
+com.hmall.common.exception.BizIllegalException: 用户购物车课程不能超过10
+	at com.example.cartservice.service.impl.CartServiceImpl.checkCartsFull(CartServiceImpl.java:143) ~[classes/:na]
+	at com.example.cartservice.service.impl.CartServiceImpl.addItem2Cart(CartServiceImpl.java:61) ~[classes/:na]
+	at com.example.cartservice.service.impl.CartServiceImpl$$FastClassBySpringCGLIB$$8dac896a.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.27.jar:5.3.27]
+	at com.example.cartservice.service.impl.CartServiceImpl$$EnhancerBySpringCGLIB$$846295.addItem2Cart(<generated>) ~[classes/:na]
+	at com.example.cartservice.controller.CartController.addItem2Cart(CartController.java:27) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+20:29:36:752  INFO 24820 --- [nacos-grpc-client-executor-26] com.alibaba.nacos.common.remote.client   : [c4c18a7c-782c-4403-95ff-a233f4d0159c_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 118
+20:29:36:752  INFO 24820 --- [nacos-grpc-client-executor-26] com.alibaba.nacos.common.remote.client   : [c4c18a7c-782c-4403-95ff-a233f4d0159c_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 118
+20:29:36:892  WARN 24820 --- [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[cart-service] & group[DEFAULT_GROUP]
+20:29:36:898  WARN 24820 --- [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[cart-service-local.yaml] & group[DEFAULT_GROUP]
+20:29:36:898  INFO 24820 --- [nacos.client.cachedata.internal.notifier] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-cart-service-local.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cart-service.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cart-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-swagger.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-log.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-jdbc.yaml,DEFAULT_GROUP'}]
+20:29:36:903  INFO 24820 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : The following 1 profile is active: "local"
+20:29:36:908  INFO 24820 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : Started application in 0.146 seconds (JVM running for 56.396)
+20:29:36:948  INFO 24820 --- [nacos.client.cachedata.internal.notifier] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [hm.cart.maxAmount]
+20:29:42:520 DEBUG 24820 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:29:42:520 DEBUG 24820 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 2(Long), 2030774(Long)
+20:29:42:521 DEBUG 24820 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:29:42:522 DEBUG 24820 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:29:42:523 DEBUG 24820 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 2(Long)
+20:29:42:524 DEBUG 24820 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:29:42:524 DEBUG 24820 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.insert           : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+20:29:42:525 DEBUG 24820 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.insert           : ==> Parameters: 2(Long), 2030774(Long), 外交官（Diplomat）磨砂箱子拉杆箱行李箱男女旅行箱密码箱万向轮箱包TC-15174TT 28英寸 黑色(String), {"颜色": "黑色", "尺寸": "28英寸"}(String), 58800(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t22870/321/1238637240/149996/1aa457fe/5b594396Nfb108e31.jpg!q70.jpg.webp(String)
+20:29:42:526 DEBUG 24820 --- [http-nio-8082-exec-8] c.e.c.mapper.CartMapper.insert           : <==    Updates: 1
+20:29:42:589 DEBUG 24820 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectList       : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+20:29:42:590 DEBUG 24820 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectList       : ==> Parameters: 2(Long)
+20:29:42:593 DEBUG 24820 --- [http-nio-8082-exec-7] c.e.c.mapper.CartMapper.selectList       : <==      Total: 2
+20:29:42:594 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=2030774&ids=1533902 HTTP/1.1
+20:29:42:594 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] user-info: 2
+20:29:42:594 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+20:29:42:608 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (13ms)
+20:29:42:608 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] connection: keep-alive
+20:29:42:608 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] content-type: application/json
+20:29:42:608 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] date: Fri, 18 Oct 2024 12:29:42 GMT
+20:29:42:608 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] keep-alive: timeout=60
+20:29:42:608 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] transfer-encoding: chunked
+20:29:42:608 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] 
+20:29:42:608 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] [{"id":"1533902","name":"新西兰进口牛奶 纽仕兰 3.5g蛋白质全脂牛奶 250ml*24整箱装纯牛奶","price":9700,"stock":9997,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t3526/295/888755633/189982/16ea21b4/5816dce5N70820f42.jpg!q70.jpg.webp","category":"牛奶","brand":"纽仕兰","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"2030774","name":"外交官（Diplomat）磨砂箱子拉杆箱行李箱男女旅行箱密码箱万向轮箱包TC-15174TT 28英寸 黑色","price":58800,"stock":9996,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t22870/321/1238637240/149996/1aa457fe/5b594396Nfb108e31.jpg!q70.jpg.webp","category":"拉杆箱","brand":"Diplomat","spec":"{\"颜色\": \"黑色\", \"尺寸\": \"28英寸\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+20:29:42:608 DEBUG 24820 --- [http-nio-8082-exec-7] com.example.hmapi.client.ItemClient      : [ItemClient#queryItemByIds] <--- END HTTP (822-byte body)
+20:29:45:390 DEBUG 24820 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+20:29:45:390 DEBUG 24820 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 2(Long), 2120808(Long)
+20:29:45:391 DEBUG 24820 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:29:45:392 DEBUG 24820 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+20:29:45:392 DEBUG 24820 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : ==> Parameters: 2(Long)
+20:29:45:393 DEBUG 24820 --- [http-nio-8082-exec-6] c.e.c.mapper.CartMapper.selectCount      : <==      Total: 1
+20:29:45:394 ERROR 24820 --- [http-nio-8082-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.hmall.common.exception.BizIllegalException: 用户购物车课程不能超过10] with root cause
+
+com.hmall.common.exception.BizIllegalException: 用户购物车课程不能超过10
+	at com.example.cartservice.service.impl.CartServiceImpl.checkCartsFull(CartServiceImpl.java:143) ~[classes/:na]
+	at com.example.cartservice.service.impl.CartServiceImpl.addItem2Cart(CartServiceImpl.java:61) ~[classes/:na]
+	at com.example.cartservice.service.impl.CartServiceImpl$$FastClassBySpringCGLIB$$8dac896a.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.27.jar:5.3.27]
+	at com.example.cartservice.service.impl.CartServiceImpl$$EnhancerBySpringCGLIB$$846295.addItem2Cart(<generated>) ~[classes/:na]
+	at com.example.cartservice.controller.CartController.addItem2Cart(CartController.java:27) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+20:57:11:772  WARN 24820 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+20:57:11:772  WARN 24820 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+20:57:11:772  WARN 24820 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+20:57:11:772  WARN 24820 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+20:57:11:788  INFO 24820 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+20:57:11:790  INFO 24820 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+20:57:12:118  INFO 24820 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+20:57:12:118  INFO 24820 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@73eeb04d[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+20:57:12:118  INFO 24820 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1729254523973_192.168.139.1_58104
+20:57:12:119  INFO 24820 --- [nacos-grpc-client-executor-356] c.a.n.c.remote.client.grpc.GrpcClient    : [1729254523973_192.168.139.1_58104]Ignore complete event,isRunning:false,isAbandon=false
+20:57:12:120  INFO 24820 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@4886f33f[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 357]
+20:57:12:122  INFO 24820 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+20:57:12:128  INFO 24820 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
