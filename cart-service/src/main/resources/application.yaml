@@ -1,7 +1,14 @@
 server:
   port: 8082
+  tomcat:
+    threads:
+      max: 50 # 允许的最大线程数
+    accept-count: 50 # 最大排队等待数量
+    max-connections: 100 # 允许的最大连接
 feign:
   okhttp:
+    enabled: true
+  sentinel:
     enabled: true
 hm:
   swagger:
@@ -9,3 +16,9 @@ hm:
     package: com.example.cartservice.controller
   db:
     database: hm-cart
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true # 开启请求方式前缀
