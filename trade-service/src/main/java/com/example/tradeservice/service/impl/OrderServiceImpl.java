@@ -6,6 +6,7 @@ import com.example.hmapi.client.CartClient;
 import com.example.hmapi.client.ItemClient;
 import com.example.hmapi.dto.ItemDTO;
 import com.example.hmapi.dto.OrderDetailDTO;
+import com.example.tradeservice.constants.MqConstants;
 import com.example.tradeservice.domain.dto.OrderFormDTO;
 import com.example.tradeservice.domain.po.Order;
 import com.example.tradeservice.domain.po.OrderDetail;
@@ -15,6 +16,7 @@ import com.example.tradeservice.service.IOrderService;
 import com.hmall.common.exception.BadRequestException;
 import com.hmall.common.utils.UserContext;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -41,6 +43,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private final IOrderDetailService detailService;
     private final ItemClient itemClient;
     private final CartClient cartClient;
+    private final RabbitTemplate rabbitTemplate;
 //    private final ICartService cartService;
 
     @Override
@@ -87,6 +90,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         } catch (Exception e) {
             throw new RuntimeException("库存不足！");
         }
+        rabbitTemplate.convertAndSend(
+                MqConstants.DELAY_EXCHANGE_NAME,
+                MqConstants.DELAY_ORDER_KEY, order.getId(), message -> {
+                    message.getMessageProperties().setDelay(10000);
+                    return message;
+                });
         return order.getId();
     }
 
@@ -97,6 +106,11 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setStatus(2);
         order.setPayTime(LocalDateTime.now());
         updateById(order);
+    }
+
+    @Override
+    public void cancelOrder(Long orderId) {
+
     }
 
     private List<OrderDetail> buildDetails(Long orderId, List<ItemDTO> items, Map<Long, Integer> numMap) {

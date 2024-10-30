@@ -28,7 +28,7 @@ mybatis-plus:
       id-type: auto
 logging:
   level:
-    com.hmall: debug
+    com.example: debug
   pattern:
     dateformat: HH:mm:ss:SSS
   file:

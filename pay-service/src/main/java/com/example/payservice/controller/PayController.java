@@ -1,8 +1,10 @@
 package com.example.payservice.controller;
 
 import com.example.hmapi.config.DefaultFeignConfig;
+import com.example.hmapi.dto.PayOrderDTO;
 import com.example.payservice.domain.dto.PayApplyDTO;
 import com.example.payservice.domain.dto.PayOrderFormDTO;
+import com.example.payservice.domain.po.PayOrder;
 import com.example.payservice.domain.vo.PayOrderVO;
 import com.example.payservice.enums.PayType;
 import com.example.payservice.service.IPayOrderService;
@@ -47,5 +49,12 @@ public class PayController {
     public void tryPayOrderByBalance(@PathVariable("id") Long id, @RequestBody PayOrderFormDTO payOrderFormDTO){
         payOrderFormDTO.setId(id);
         payOrderService.tryPayOrderByBalance(payOrderFormDTO);
+    }
+
+    @ApiOperation("根据id查询支付单")
+    @GetMapping("/biz/{id}")
+    public PayOrderDTO queryPayOrderByBizOrderNo(@PathVariable("id") Long id){
+        PayOrder payOrder = payOrderService.lambdaQuery().eq(PayOrder::getBizOrderNo, id).one();
+        return BeanUtils.copyBean(payOrder, PayOrderDTO.class);
     }
 }
