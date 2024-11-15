@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.itemservice.domain.dto.ItemDTO;
 import com.example.itemservice.domain.dto.OrderDetailDTO;
 import com.example.itemservice.domain.po.Item;
+import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.List;
